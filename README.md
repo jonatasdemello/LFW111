@@ -24,8 +24,16 @@ https://forum.linuxfoundation.org/categories/lfw111-class-forum
 
 Check different GitHub branches for each chapter's code.
 
-main: code from "03. Service Mocking"
+- main: initial code
+- 03-service-01: add web service
 
+
+run:
+
+```
+$ cd static
+$ npm run static
+```
 
 Chapters:
 
