@@ -2,13 +2,14 @@
 
 const API = "http://localhost:3000/";
 
-const populateProducts = async () => {
+// add route category
+const populateProducts = async (category) => {
 	const products = document.querySelector('#products')
 	products.innerHTML = ''
 
-	// pull data form API instead:
-	const res = await fetch(API)
-    const data = await res.json()
+	// allows selecting a category
+	const res = await fetch(`${API}/${category}`)
+	const data = await res.json()
 
 	for (const product of data) {
 		const item = document.createElement('product-item')
@@ -22,14 +23,16 @@ const populateProducts = async () => {
 	}
 }
 
-document.querySelector('#fetch').addEventListener('click', async () => {
-	await populateProducts()
+const category = document.querySelector('#category')
+
+category.addEventListener('input', async ({ target }) => {
+	await populateProducts(target.value)
 })
 
 customElements.define('product-item', class Item extends HTMLElement {
 	constructor() {
 		super()
-		const itemTmpl = document.querySelector('#item').content.cloneNode(true)
-		this.attachShadow({ mode: 'open' }).appendChild(itemTmpl)
+		const itemTmpl = document.querySelector('#item').content
+		this.attachShadow({ mode: 'open' }).appendChild(itemTmpl.cloneNode(true))
 	}
 })

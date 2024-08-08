@@ -26,7 +26,7 @@ Check different GitHub branches for each chapter's code.
 
 - main: initial code
 - 03-service-01: add web service
-
+- 03-service-02: add web service routes using Fastify
 
 run:
 
