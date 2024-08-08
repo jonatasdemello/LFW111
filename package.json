@@ -1,0 +1,16 @@
+{
+  "name": "my-node-project",
+  "version": "1.0.0",
+  "description": "LFW111 - The Linux Foundation's - Introduction to Node.js Course",
+  "main": "index.js",
+  "scripts": {
+    "static": "serve -p 5050 static",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
