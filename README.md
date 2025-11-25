@@ -1,4 +1,4 @@
-# LFW111
+# Linux-LFW111
 
 LFW111 - The Linux Foundation's - Introduction to Node.js Course
 
